@@ -1,0 +1,28 @@
+{
+    "servers": {
+        "idp": {
+            "name": "Indopride Roleplay",
+            "join_code": "237yxy"
+        },
+        "ime": {
+            "name": "Ime Roleplay",
+            "join_code": "zrvmg4"
+        },
+        "jing": {
+            "name": "Jing Arena",
+            "join_code": "6gqrq4"
+        },
+        "kerta": {
+            "name": "Kerta Arena",
+            "join_code": "mxk58q"
+        },
+        "sm": {
+            "name": "Satu Mimpi",
+            "join_code": "3e3gdb"
+        },
+        "exe": {
+            "name": "EXECUTIVE",
+            "join_code": "roek67"
+        }
+    }
+}
