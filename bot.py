@@ -332,7 +332,7 @@ async def help(ctx):
         name="🌐 Server",
         value=(
             "`=serverlist`\n"
-            "→ Menampilkan daftar server\n\n"
+            "→ Menampilkan daftar server\n"
         ),
         inline=False
     )
@@ -353,8 +353,8 @@ async def help(ctx):
     embed.add_field(
         name="⚙️ Manajemen Server",
         value=(
-            "`=addserver <id server> <link>`\n"
-            "→ Tambah server baru\n\n"
+            "`=addserver <id server> <join code>`\n"
+            "→ Tambah server baru\n"
         ),
         inline=False
     )
@@ -365,8 +365,39 @@ async def help(ctx):
         value=(
             "`=allplayer ime`\n"
             "`=player ime lotf`\n"
+            "`=addserver ime zrvmg4`\n"
         ),
         inline=False
+    )
+
+    # 🔑 JOIN CODE GUIDE
+    embed.add_field(
+        name="🔑 Apa itu Join Code?",
+        value=(
+            "Join code adalah kode unik server FiveM.\n\n"
+            "📌 Contoh link:\n"
+            "`https://cfx.re/join/zrvmg4`\n\n"
+            "👉 Join code adalah bagian akhir:\n"
+            "`zrvmg4`\n\n"
+            "Gunakan saat menambahkan server:\n"
+            "`=addserver ime zrvmg4`"
+        ),
+        inline=False
+    )
+
+    # 🌐 CONTOH NYATA
+    embed.add_field(
+        name="🌍 Contoh Server Nyata",
+        value=(
+            "**iMe RP**\n"
+            "`cfx.re/join/zrvmg4`"
+        ),
+        inline=False
+    )
+
+    # 🖼️ GAMBAR (GANTI LINK SESUAI GAMBAR KAMU)
+    embed.set_image(
+        url="https://raw.githubusercontent.com/ahmadfajarpermadi/bot-fivem/master/addserver.png"  # 🔥 ganti dengan gambar yang kamu upload
     )
 
     embed.set_footer(text="⚡ FiveM Discord Bot • Made by TELO GAMING 😈")
