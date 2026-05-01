@@ -4,7 +4,6 @@ from discord.ext import commands
 from server_manager import get_players_cfx, load_servers, save_servers
 from dotenv import load_dotenv
 import os
-
 import threading
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
@@ -14,12 +13,15 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(b'Bot is alive')
 
+    def do_HEAD(self):  # 🔥 FIX DI SINI
+        self.send_response(200)
+        self.end_headers()
+
 def run_web():
     server = HTTPServer(('0.0.0.0', 8080), Handler)
     server.serve_forever()
 
 threading.Thread(target=run_web, daemon=True).start()
-
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
 
