@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 import os
 import threading
 from http.server import HTTPServer, BaseHTTPRequestHandler
-
+import traceback
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
@@ -405,4 +405,9 @@ async def help(ctx):
     embed.set_footer(text="⚡ FiveM Discord Bot • Made by TELO GAMING 😈")
 
     await ctx.send(embed=embed)
-bot.run(TOKEN)
+    
+@bot.event
+async def on_error(event, *args, **kwargs):
+    print(f"Error di event: {event}")
+    traceback.print_exc()
+bot.run(TOKEN, reconnect=True)
